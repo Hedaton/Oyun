@@ -1,3 +1,4 @@
 # Oyun
 
-Bu oyunu sadece ENES oynayamaz.
+Bu oyunu sadece ENES oynayamaz. 
+// harun oynadı bu arada
