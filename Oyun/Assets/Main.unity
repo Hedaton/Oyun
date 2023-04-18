@@ -567,8 +567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  speed: 8
-  jumpingPower: 30
+  speed: 7
+  jumpingPower: 15
   animator: {fileID: 654031180}
   rb: {fileID: 654031176}
   groundCheckCollider: {fileID: 1721018178}
