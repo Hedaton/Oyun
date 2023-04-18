@@ -6,21 +6,23 @@ public class PlayerController : MonoBehaviour
 {
 
     private float horizontal;
+    public bool isGrounded;
     public float speed = 8f;
     public float jumpingPower = 16f;
     private bool isFacingRight = true; //saða bakýyor
     private bool isWalking = false;
+    const float groundCheckRadius = 0.2f;
 
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform graundCheck;
-    [SerializeField] private LayerMask graundLayer;
+    [SerializeField] private Transform groundCheckCollider;
+    [SerializeField] private LayerMask groundLayer;
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.W) && isGraunded())
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool("Jump", true);
@@ -33,14 +35,16 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        GroundCheck();
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
-    private bool isGraunded()
+    void GroundCheck()
     {
-        animator.SetBool("Jump", !isGraunded());
-
-        return Physics2D.OverlapCircle(graundCheck.position, 0.2f, graundLayer);
-
+        isGrounded = false;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadius, groundLayer);
+        if(colliders.Length>0)
+            isGrounded = true;
+        animator.SetBool("Jump", !isGrounded);
 
     }
 

@@ -545,12 +545,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f385a3d7ca959b48a1d54ba2688ef50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   speed: 8
   jumpingPower: 16
   animator: {fileID: 0}
   rb: {fileID: 0}
-  graundCheck: {fileID: 0}
-  graundLayer:
+  groundCheckCollider: {fileID: 0}
+  groundLayer:
     serializedVersion: 2
     m_Bits: 0
 --- !u!114 &654031183
@@ -565,12 +566,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f385a3d7ca959b48a1d54ba2688ef50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrounded: 0
   speed: 8
   jumpingPower: 30
   animator: {fileID: 654031180}
   rb: {fileID: 654031176}
-  graundCheck: {fileID: 1721018178}
-  graundLayer:
+  groundCheckCollider: {fileID: 1721018178}
+  groundLayer:
     serializedVersion: 2
     m_Bits: 256
 --- !u!1 &1101719965
