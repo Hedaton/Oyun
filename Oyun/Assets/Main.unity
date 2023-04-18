@@ -547,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   jumpingPower: 16
+  animator: {fileID: 0}
   rb: {fileID: 0}
   graundCheck: {fileID: 0}
   graundLayer:
@@ -565,7 +566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpingPower: 23
+  jumpingPower: 30
+  animator: {fileID: 654031180}
   rb: {fileID: 654031176}
   graundCheck: {fileID: 1721018178}
   graundLayer:

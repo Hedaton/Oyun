@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true; //saða bakýyor
     private bool isWalking = false;
 
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform graundCheck;
     [SerializeField] private LayerMask graundLayer;
@@ -22,12 +23,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && isGraunded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("Jump", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
 
 
         flip();
@@ -35,15 +33,19 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
     private bool isGraunded()
     {
         return Physics2D.OverlapCircle(graundCheck.position, 0.2f, graundLayer);
+
+        animator.SetBool("Jump", !isGraunded());
     }
 
     private void flip()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (isFacingRight && horizontal <0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
