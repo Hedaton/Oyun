@@ -33,14 +33,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
     private bool isGraunded()
     {
+        animator.SetBool("Jump", !isGraunded());
+
         return Physics2D.OverlapCircle(graundCheck.position, 0.2f, graundLayer);
 
-        animator.SetBool("Jump", !isGraunded());
+
     }
 
     private void flip()
