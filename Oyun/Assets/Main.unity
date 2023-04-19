@@ -582,7 +582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {x: 8.23, y: 0.16}
   pos2: {x: 2, y: 0.16}
-  leftRightSpeed: 1
+  speed: 1
+  distance: 10
 --- !u!4 &969796392
 Transform:
   m_ObjectHideFlags: 0
