@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        KiCharge();
         Running();
         Jump();
         Attack();
@@ -56,17 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void KiCharge()
-    {
-        if(Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("KiCharge", true);
-        }
-        else if (Input.GetKeyUp(KeyCode.S))
-        {
-            animator.SetBool("KiCharge", false);
-        }
-    }
+    
 
     void Running()
     {

@@ -9,6 +9,8 @@ public class SUPA : MonoBehaviour
     public float Ki;
     float maxKi = 100;
 
+    PlayerMovement movement = new PlayerMovement();
+
     public Slider kiSlider;
 
     public Animator anim;
@@ -25,13 +27,15 @@ public class SUPA : MonoBehaviour
 
     public void KiCharge()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && Ki < maxKi)
         {
             anim.SetBool("KiCharge", true);
             kiSlider.value = Ki;
-            Ki += 14 * Time.deltaTime;
+            Ki += 20 * Time.deltaTime;
+            movement.movementSpeed = 0f;
+            movement.jumpForce = 0f;
         }
-        else if(Input.GetKeyUp(KeyCode.S))
+        else if(Input.GetKeyUp(KeyCode.S) || Ki > maxKi)
         {
             anim.SetBool("KiCharge", false);
         }
