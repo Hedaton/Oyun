@@ -68,7 +68,7 @@ public class EnemyLevel1 : MonoBehaviour
     void EnemyFollow()
     {
         Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.z);
-        transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
     }
 
 }
