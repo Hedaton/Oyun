@@ -60,6 +60,7 @@ public class EnemyLevel1 : MonoBehaviour
             anim.SetBool("EnemyAttack", true);
             print("saldýr");
             EnemyFollow();
+            supa.kame = true;
         }
         else
         {
@@ -67,6 +68,7 @@ public class EnemyLevel1 : MonoBehaviour
             print("saldýrma");
             anim.SetBool("EnemyAttack", false);
             EnemyMove();
+            supa.kame = false;
         }
     }
 

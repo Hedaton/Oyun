@@ -10,8 +10,8 @@ public class SUPA : MonoBehaviour
     float maxKi = 100;
 
     public float healt;
-    float maxHealt = 100;
     public bool kame = false;
+    bool dead = false;
 
     PlayerMovement movement;
 
@@ -36,7 +36,13 @@ public class SUPA : MonoBehaviour
     {
         if (kame)
         {
-            healt -= 10;
+            healt -= 10 * Time.deltaTime;
+            healtSlider.value = healt;
+        }
+
+        if (healt <= 0)
+        {
+            dead = true;
         }
     }
 
