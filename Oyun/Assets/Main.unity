@@ -794,7 +794,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ki: 0
+  healt: 0
+  kame: 0
   kiSlider: {fileID: 863213848}
+  healtSlider: {fileID: 1421147144}
 --- !u!1 &863213847
 GameObject:
   m_ObjectHideFlags: 0
