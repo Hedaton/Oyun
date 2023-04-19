@@ -11,10 +11,33 @@ public class SUPA : MonoBehaviour
 
     public Slider kiSlider;
 
+    public Animator anim;
+
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
-        kiSlider.value = Ki;
+        KiCharge();
     }
+
+    public void KiCharge()
+    {
+        if (Input.GetKey(KeyCode.S))
+        {
+            anim.SetBool("KiCharge", true);
+            kiSlider.value = Ki;
+            Ki += 14 * Time.deltaTime;
+        }
+        else if(Input.GetKeyUp(KeyCode.S))
+        {
+            anim.SetBool("KiCharge", false);
+        }
+    }
+
+
 
     private void setEnergy()
     {
