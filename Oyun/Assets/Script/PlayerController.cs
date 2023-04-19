@@ -1,58 +1,105 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
 
-    private float horizontal;
-    public bool isGrounded;
-    public float speed = 8f;
-    public float jumpingPower = 16f;
-    private bool isFacingRight = true; //saða bakýyor
-    private bool isWalking = false;
-    const float groundCheckRadius = 0.2f;
-
-    Animator animator;
     Rigidbody2D rb;
+    Animator animator;
+    [SerializeField] Transform groundCheckCollider;
+    [SerializeField] LayerMask groundLayer;
 
-    [SerializeField] private Transform groundCheckCollider;
-    [SerializeField] private LayerMask groundLayer;
+    const float groundCheckRadius = 0.6f;
+    public float movementSpeed;
+    public float initialMovementSpeed = 200f;
+    public float jumpForce = 45f;
 
-    private void Start()
+    float xInput;
+    public float runningSpeed = 1.3f;
+
+    public bool isGrounded;
+    bool facingRight = true;
+
+
+    void Start()
     {
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+
+        movementSpeed = initialMovementSpeed;
     }
 
 
-    private void Update()
+    void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        KiCharge();
+        Running();
+        Jump();
+        Attack();
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        // Hareket ettirme
+        xInput = Input.GetAxisRaw("Horizontal");
+
+    }
+
+    private void FixedUpdate()
+    {
+        Move(xInput);
+        PlayerFacing();
+        GroundCheck();
+
+
+        animator.SetFloat("yVelocity", rb.velocity.y);
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+
+
+
+    }
+
+    void KiCharge()
+    {
+        if (Input.GetKey(KeyCode.S))
         {
-            animator.SetBool("Jump", true);
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            
+            animator.SetBool("KiCharge", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("KiCharge", false);
+        }
+    }
+
+    void Running()
+    {
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                movementSpeed *= runningSpeed;
+                animator.speed = 2f;
+
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                movementSpeed = initialMovementSpeed;
+                animator.speed = 1f;
+
+            }
         }
 
 
 
-
     }
-    private void FixedUpdate()
+
+    void Jump()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        GroundCheck();
-        
-        animator.SetFloat("yVelocity", rb.velocity.y);
-        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
-        flip();
-
-
-        animator.SetFloat("xValue", Mathf.Abs(rb.velocity.x));
+        if (Input.GetKey(KeyCode.W) && isGrounded)
+        {
+            animator.SetBool("Jump", true);
+            rb.AddForce(new Vector2(0f, jumpForce));
+        }
     }
+
+    // Karakter yere temas ediyormu isGrounded
     void GroundCheck()
     {
         isGrounded = false;
@@ -62,17 +109,47 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
-
         animator.SetBool("Jump", !isGrounded);
 
     }
 
-    private void flip()
+    void Move(float dir)
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        rb.velocity = new Vector2(movementSpeed * dir * Time.deltaTime, rb.velocity.y);
+    }
+
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            isFacingRight = !isFacingRight;
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            animator.SetTrigger("Attack");
+        }
+    }
+
+    // Karakteri dï¿½ndï¿½rme
+    void PlayerFacing()
+    {
+        if (xInput != 0)
+        {
+            rb.AddForce(new Vector2(xInput * movementSpeed, 0f));
+        }
+
+        if (xInput > 0 && !facingRight)
+        {
+            Vector3 currentScale = gameObject.transform.localScale;
+            currentScale.x *= -1;
+            gameObject.transform.localScale = currentScale;
+
+            facingRight = !facingRight;
+        }
+
+        if (xInput < 0 && facingRight)
+        {
+            Vector3 currentScale = gameObject.transform.localScale;
+            currentScale.x *= -1;
+            gameObject.transform.localScale = currentScale;
+
+            facingRight = !facingRight;
         }
     }
 
