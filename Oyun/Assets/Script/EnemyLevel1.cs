@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyLevel1 : MonoBehaviour
 {
 
+    SUPA supa;
     public Vector2 pos1;
     public Vector2 pos2;
     public float speed = 1f;
@@ -23,6 +24,8 @@ public class EnemyLevel1 : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
+        supa = GetComponent<SUPA>();
+
     }
 
     
@@ -54,6 +57,7 @@ public class EnemyLevel1 : MonoBehaviour
         if (hitEnemy.collider !=null)
         {
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
+            anim.SetBool("EnemyAttack", true);
             print("saldýr");
             EnemyFollow();
         }
@@ -61,13 +65,14 @@ public class EnemyLevel1 : MonoBehaviour
         {
             Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
             print("saldýrma");
+            anim.SetBool("EnemyAttack", false);
             EnemyMove();
         }
     }
 
     void EnemyFollow()
     {
-        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.z);
+        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.x);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
     }
 
