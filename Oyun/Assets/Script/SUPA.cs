@@ -9,7 +9,7 @@ public class SUPA : MonoBehaviour
     public float Ki;
     float maxKi = 100;
 
-    public float healt = 100;
+    public float healt = 0;
     public bool kame = false;
     bool dead = false;
 
@@ -36,7 +36,7 @@ public class SUPA : MonoBehaviour
     {
         if (kame)
         {
-            healt -= 10 * Time.deltaTime;
+            healt += 10 * Time.deltaTime;
             healtSlider.value = healt;
         }
 

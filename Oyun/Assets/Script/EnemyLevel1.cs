@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLevel1 : MonoBehaviour
 {
 
-    SUPA supa;
+    public SUPA supa;
     public Vector2 pos1;
     public Vector2 pos2;
     public float speed = 1f;
@@ -24,7 +24,7 @@ public class EnemyLevel1 : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        supa = GameObject.FindGameObjectWithTag("Player").GetComponent<SUPA>();
+        
 
     }
 
