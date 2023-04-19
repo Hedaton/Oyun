@@ -12,9 +12,17 @@ public class EnemyLevel1 : MonoBehaviour
 
     public float distance;
 
+    private Transform target;
+    public float followSpeed;
+
+    private Animator anim;
+
     void Start()
     {
         Physics2D.queriesStartInColliders = false;
+
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     
@@ -54,5 +62,10 @@ public class EnemyLevel1 : MonoBehaviour
         }
     }
 
+    void EnemyFollow()
+    {
+        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.x);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
+    }
 
 }
