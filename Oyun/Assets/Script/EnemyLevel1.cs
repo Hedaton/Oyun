@@ -22,15 +22,14 @@ public class EnemyLevel1 : MonoBehaviour
         Physics2D.queriesStartInColliders = false;
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        anim = GetComponent<Animator>();
     }
 
     
 
     void Update()
     {
-        EnemyMove();
-        EnemyAi();
+        EnemyAi();  
     }
 
     void EnemyMove()
@@ -55,16 +54,20 @@ public class EnemyLevel1 : MonoBehaviour
         if (hitEnemy.collider !=null)
         {
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
+            print("saldýr");
+            EnemyFollow();
         }
         else
         {
             Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
+            print("saldýrma");
+            EnemyMove();
         }
     }
 
     void EnemyFollow()
     {
-        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.x);
+        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.z);
         transform.position = Vector2.MoveTowards(transform.position, target.position, followSpeed * Time.deltaTime);
     }
 
