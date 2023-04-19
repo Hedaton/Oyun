@@ -9,7 +9,7 @@ public class SUPA : MonoBehaviour
     public float Ki;
     float maxKi = 100;
 
-    public float healt;
+    public float healt = 100;
     public bool kame = false;
     bool dead = false;
 

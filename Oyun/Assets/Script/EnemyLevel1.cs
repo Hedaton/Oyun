@@ -24,7 +24,7 @@ public class EnemyLevel1 : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        supa = GetComponent<SUPA>();
+        supa = GameObject.FindGameObjectWithTag("Player").GetComponent<SUPA>();
 
     }
 
@@ -74,7 +74,7 @@ public class EnemyLevel1 : MonoBehaviour
 
     void EnemyFollow()
     {
-        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.x);
+        Vector3 targetPosition = new Vector3(target.position.x, gameObject.transform.position.y, target.position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
     }
 
