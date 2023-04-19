@@ -18,10 +18,11 @@ public class SUPA : MonoBehaviour
     public Slider kiSlider;
     public Slider healtSlider;
 
-    public Animator anim;
+    Animator anim;
 
-    private void Start()
+    void Start()
     {
+        anim = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
     }
 
