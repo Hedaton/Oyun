@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
+using System;
 
 public class EnemyLevel1 : MonoBehaviour
 {
@@ -36,6 +38,14 @@ public class EnemyLevel1 : MonoBehaviour
 
     void EnemyMove()
     {
+        
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+        Thread.Sleep(1000);
+
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        
+        
     }
 
     void EnemyAi()
