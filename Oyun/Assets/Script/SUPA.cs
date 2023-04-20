@@ -9,6 +9,7 @@ public class SUPA : MonoBehaviour
     public float Ki;
     float maxKi = 100;
 
+    public float increaseRate = 2.0f;
     public float healt = 100;
     public bool kame = false;
     public bool dead = false;
@@ -71,7 +72,7 @@ public class SUPA : MonoBehaviour
             Lock();
             anim.speed = 1f;
             anim.SetBool("KiCharge", true);
-            if (Ki + 20 * Time.deltaTime > maxKi)
+            if (Ki * (1.0f + increaseRate) > maxKi)
             {
                 Ki = 100f;
                 animator.SetTrigger("initialKiFull");
@@ -79,7 +80,7 @@ public class SUPA : MonoBehaviour
             else
             {
                 kiSlider.value = Ki;
-                Ki += 20 * Time.deltaTime;
+                Ki *= (1.0f + increaseRate * Time.deltaTime);
             }
 
         }
