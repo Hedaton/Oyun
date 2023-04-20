@@ -8,10 +8,7 @@ public class EnemyLevel1 : MonoBehaviour
 {
 
     [SerializeField] SUPA supa;
-    public Vector2 pos1;
-    public Vector2 pos2;
     public float speed = 1f;
-    private float oldPosition;
 
     public float distance;
 
@@ -38,12 +35,19 @@ public class EnemyLevel1 : MonoBehaviour
 
     void EnemyMove()
     {
+
+        float saniye = 0;
+        saniye += 1 * Time.deltaTime;
+        if (saniye == 1)
+        {
+            saniye = 0;
+        }
+        else
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
         
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-
-        Thread.Sleep(1000);
-
-        transform.localRotation = Quaternion.Euler(0, 0, 0);
         
         
     }
@@ -58,7 +62,6 @@ public class EnemyLevel1 : MonoBehaviour
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
             print("saldýr");
             EnemyFollow();
-            anim.SetBool("EnemyAttack", true);
         }
         else
         {
@@ -66,7 +69,6 @@ public class EnemyLevel1 : MonoBehaviour
             Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
             print("saldýrma");
             EnemyMove();
-            anim.SetBool("EnemyAttack", false);
         }
     }
 
