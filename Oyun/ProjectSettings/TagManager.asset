@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ekran
+    uniqueID: 1916218619
+    locked: 0

@@ -13,6 +13,7 @@ public class SUPA : MonoBehaviour
     public bool kame = false;
     public bool dead = false;
     public bool charcing;
+    public bool kiFull;
 
     PlayerMovement movement;
 
@@ -20,6 +21,7 @@ public class SUPA : MonoBehaviour
     public Slider healtSlider;
 
     Animator anim;
+    public Animator animator;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class SUPA : MonoBehaviour
 
     private void Update()
     {
+        KiFull();
         if (dead == false)
         {
             KiCharge();
@@ -66,9 +69,19 @@ public class SUPA : MonoBehaviour
         else if (Input.GetKey(KeyCode.S) && Ki < maxKi)
         {
             Lock();
+            anim.speed = 1f;
             anim.SetBool("KiCharge", true);
-            kiSlider.value = Ki;
-            Ki += 20 * Time.deltaTime;
+            if (Ki + 20 * Time.deltaTime > maxKi)
+            {
+                Ki = 100f;
+                animator.SetTrigger("initialKiFull");
+            }
+            else
+            {
+                kiSlider.value = Ki;
+                Ki += 20 * Time.deltaTime;
+            }
+
         }
         else if (Input.GetKeyUp(KeyCode.S) || Ki > maxKi)
         {
@@ -88,6 +101,20 @@ public class SUPA : MonoBehaviour
     {
         movement.movementSpeed = movement.initialMovementSpeed;
         movement.jumpForce = movement.initialJumpForce;
+    }
+
+    void KiFull()
+    {
+        if (Ki == 100f)
+        {
+            kiFull = true;
+            animator.SetBool("KiFull", true);
+        }
+        else
+        {
+            kiFull = false;
+            animator.SetBool("KiFull", false);
+        }
     }
 
     private void setEnergy()

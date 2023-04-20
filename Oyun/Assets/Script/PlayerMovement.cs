@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (supa.dead == false && supa.charcing == false)
+        if (supa.dead == false)
         {
             Running();
             Jump();
