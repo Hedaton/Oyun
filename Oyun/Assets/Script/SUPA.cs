@@ -11,7 +11,8 @@ public class SUPA : MonoBehaviour
 
     public float healt = 100;
     public bool kame = false;
-    bool dead = false;
+    public bool dead = false;
+    public bool charcing;
 
     PlayerMovement movement;
 
@@ -28,9 +29,12 @@ public class SUPA : MonoBehaviour
 
     private void Update()
     {
-        KiCharge();
-        setHealt();
-        Dead();
+        if (dead == false)
+        {
+            KiCharge();
+            setHealt();
+        }
+
     }
 
     public void setHealt()
@@ -43,38 +47,47 @@ public class SUPA : MonoBehaviour
 
         if (healt <= 0)
         {
-            dead = true;
             healt = 0;
-            
+            Lock();
+            anim.SetTrigger("isDeath");
+            anim.SetBool("Death", true);
+            dead = true;
+
         }
     }
 
     public void KiCharge()
     {
-        if (Input.GetKey(KeyCode.S) && Ki <maxKi)
+        if (Input.GetKeyDown(KeyCode.S) && Ki < maxKi)
         {
+            charcing = true;
+            anim.SetTrigger("Ki");
+        }
+        else if (Input.GetKey(KeyCode.S) && Ki < maxKi)
+        {
+            Lock();
             anim.SetBool("KiCharge", true);
             kiSlider.value = Ki;
             Ki += 20 * Time.deltaTime;
-            movement.movementSpeed = 0f;
-            movement.jumpForce = 0f;
         }
-        else if(Input.GetKeyUp(KeyCode.S) || Ki > maxKi)
+        else if (Input.GetKeyUp(KeyCode.S) || Ki > maxKi)
         {
+            charcing = false;
             anim.SetBool("KiCharge", false);
-            movement.movementSpeed = movement.initialMovementSpeed;
-            movement.jumpForce = 45f;
+            Unlock();
         }
     }
 
-    public void Dead()
+    void Lock()
     {
-        if (dead)
-        {
-            print("öldüm");
-            anim.SetBool("Death", true);
-           
-        }
+        movement.movementSpeed = 0f;
+        movement.jumpForce = 0f;
+    }
+
+    void Unlock()
+    {
+        movement.movementSpeed = movement.initialMovementSpeed;
+        movement.jumpForce = movement.initialJumpForce;
     }
 
     private void setEnergy()

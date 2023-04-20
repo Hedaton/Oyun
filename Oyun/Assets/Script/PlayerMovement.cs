@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    SUPA supa;
+
     Rigidbody2D rb;
     Animator animator;
     [SerializeField] Transform groundCheckCollider;
@@ -12,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     const float groundCheckRadius = 0.6f;
     public float movementSpeed;
     public float initialMovementSpeed = 200f;
-    public float jumpForce = 45f;
+    public float jumpForce;
+    public float initialJumpForce = 45f;
 
     float xInput;
     public float runningSpeed = 1.3f;
@@ -26,36 +30,46 @@ public class PlayerMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
 
-        movementSpeed = initialMovementSpeed;
-    }
+        supa = GetComponent<SUPA>();
 
+        movementSpeed = initialMovementSpeed;
+        jumpForce = initialJumpForce;
+    }
 
     void Update()
     {
-        Running();
-        Jump();
-        Attack();
-
-        // Hareket ettirme
-        xInput = Input.GetAxisRaw("Horizontal");
-
+        if (supa.dead == false && supa.charcing == false)
+        {
+            Running();
+            Jump();
+            Attack();
+            // Hareket ettirme
+            xInput = Input.GetAxisRaw("Horizontal");
+        }
     }
 
     private void FixedUpdate()
     {
-        Move(xInput);
-        PlayerFacing();
-        GroundCheck();
+        if (supa.dead == false)
+        {
+            if (supa.charcing==false)
+            {
+                 Move(xInput);
+                 PlayerFacing();
+            }
 
-     
-        animator.SetFloat("yVelocity", rb.velocity.y);
-        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+
+
+            animator.SetFloat("yVelocity", rb.velocity.y);
+            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        }
+            GroundCheck();
 
 
 
     }
 
-    
+
 
     void Running()
     {
@@ -72,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
                 animator.speed = 1f;
 
             }
-    }
+        }
 
-   
+
 
     }
 
