@@ -9,7 +9,7 @@ public class SUPA : MonoBehaviour
     public float Ki;
     float maxKi = 100;
 
-    public float healt = 0;
+    public float healt = 100;
     public bool kame = false;
     bool dead = false;
 
@@ -29,20 +29,23 @@ public class SUPA : MonoBehaviour
     private void Update()
     {
         KiCharge();
-        getHealt();
+        setHealt();
+        Dead();
     }
 
-    public void getHealt()
+    public void setHealt()
     {
         if (kame)
         {
-            healt += 10 * Time.deltaTime;
+            healt -= 10 * Time.deltaTime;
             healtSlider.value = healt;
         }
 
         if (healt <= 0)
         {
             dead = true;
+            healt = 0;
+            
         }
     }
 
@@ -64,7 +67,15 @@ public class SUPA : MonoBehaviour
         }
     }
 
-
+    public void Dead()
+    {
+        if (dead)
+        {
+            print("öldüm");
+            anim.SetBool("Death", true);
+           
+        }
+    }
 
     private void setEnergy()
     {

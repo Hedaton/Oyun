@@ -24,7 +24,6 @@ public class EnemyLevel1 : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        
 
     }
 
@@ -56,19 +55,19 @@ public class EnemyLevel1 : MonoBehaviour
 
         if (hitEnemy.collider !=null)
         {
+            supa.kame = true;
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
-            anim.SetBool("EnemyAttack", true);
             print("saldýr");
             EnemyFollow();
-            supa.kame = true;
+            anim.SetBool("EnemyAttack", true);
         }
         else
         {
+            supa.kame = false;
             Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
             print("saldýrma");
-            anim.SetBool("EnemyAttack", false);
             EnemyMove();
-            supa.kame = false;
+            anim.SetBool("EnemyAttack", false);
         }
     }
 
