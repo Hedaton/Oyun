@@ -36,17 +36,6 @@ public class EnemyLevel1 : MonoBehaviour
 
     void EnemyMove()
     {
-        transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
-
-        if (transform.position.x > oldPosition)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-        if (transform.position.x < oldPosition)
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        oldPosition = transform.position.x;
     }
 
     void EnemyAi()
