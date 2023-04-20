@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLevel1 : MonoBehaviour
 {
 
-    public SUPA supa;
+    [SerializeField] SUPA supa;
     public Vector2 pos1;
     public Vector2 pos2;
     public float speed = 1f;
