@@ -61,7 +61,7 @@ public class EnemyLevel1 : MonoBehaviour
             supa.kame = true;
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
             print("saldýr");
-            EnemyFollow();
+            //EnemyFollow();
         }
         else
         {
