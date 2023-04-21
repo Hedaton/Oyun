@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class SUPA : MonoBehaviour
 {
 
-    public float Ki;
+    public float Ki = 0.01f;
     float maxKi = 100;
 
-    public float increaseRate = 2.0f;
+    public float increaseRate = 2.3f;
     public float healt = 100;
     public bool kame = false;
     public bool dead = false;
@@ -72,7 +72,7 @@ public class SUPA : MonoBehaviour
             Lock();
             anim.speed = 1f;
             anim.SetBool("KiCharge", true);
-            if (Ki * (1.0f + increaseRate) > maxKi)
+            if (Ki * (1.0f + increaseRate * Time.deltaTime) > maxKi)
             {
                 Ki = 100f;
                 animator.SetTrigger("initialKiFull");

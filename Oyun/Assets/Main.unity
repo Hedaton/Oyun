@@ -826,7 +826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0236c1f180c1cb743bb2d3b35a5855e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ki: 0
+  Ki: 0.01
+  increaseRate: 2.3
   healt: 100
   kame: 0
   dead: 0
@@ -1041,7 +1042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
