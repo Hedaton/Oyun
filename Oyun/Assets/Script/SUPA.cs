@@ -8,9 +8,14 @@ public class SUPA : MonoBehaviour
 
     public float Ki = 0.01f;
     float maxKi = 100;
+    float timer = 0f;
+    int sCount = 0;
 
     public float increaseRate = 2.3f;
     public float healt = 100;
+
+    public bool ssj = true;
+    public bool ssgss = false;
     public bool kame = false;
     public bool dead = false;
     public bool charcing;
@@ -28,6 +33,9 @@ public class SUPA : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
+
+        anim.SetBool("SSJ", ssj);
+        anim.SetBool("SSGSS", ssgss);
     }
 
     private void Update()
@@ -35,6 +43,7 @@ public class SUPA : MonoBehaviour
         KiFull();
         if (dead == false)
         {
+            Transform();
             KiCharge();
             setHealt();
         }
@@ -94,14 +103,12 @@ public class SUPA : MonoBehaviour
 
     void Lock()
     {
-        movement.movementSpeed = 0f;
-        movement.jumpForce = 0f;
+        charcing = true;
     }
 
     void Unlock()
     {
-        movement.movementSpeed = movement.initialMovementSpeed;
-        movement.jumpForce = movement.initialJumpForce;
+        charcing = false;
     }
 
     void KiFull()
@@ -116,6 +123,51 @@ public class SUPA : MonoBehaviour
             kiFull = false;
             animator.SetBool("KiFull", false);
         }
+    }
+
+    void Transform()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            sCount++;
+        }
+
+        timer += Time.deltaTime;
+        if (timer >= 1f)
+        {
+            if (sCount == 3)
+            {
+                StartCoroutine(RunCodeForSomeTime(2.5f));
+                ssj = !ssj;
+                ssgss = !ssgss;
+                anim.SetTrigger("Transform");
+                anim.SetBool("SSJ", ssj);
+                anim.SetBool("SSGSS", ssgss);
+               
+
+            }
+            // sCount ve timer'ý sýfýrla
+            sCount = 0;
+            timer = 0f;
+        }
+    }
+
+    IEnumerator RunCodeForSomeTime(float sec)
+    {
+        float totalTime = sec;
+        float timeInterval = 2.5f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < totalTime)
+        {
+            Lock();
+
+            yield return new WaitForSeconds(timeInterval);
+
+            elapsedTime += timeInterval;
+        }
+
+        Unlock();
     }
 
     private void setEnergy()

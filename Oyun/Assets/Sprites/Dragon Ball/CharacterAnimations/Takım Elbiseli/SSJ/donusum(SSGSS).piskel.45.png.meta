@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 88b4705443956ba40b35afacf093a73d
+guid: fc1bb0c6ad3d916488a053beecf90616
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -101,572 +100,521 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: harununbest_0
+      name: donusum(SSGSS).piskel.45_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 225
-        width: 7
-        height: 17
+        x: 0
+        y: 192
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.555338, y: 0.47721234}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a302c806f0f346c4f918a3476ba43bb3
-      internalID: 1112052920
+      spriteID: 687f9ed4467ed954e82a19bd9462c9cc
+      internalID: 123238517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_1
+      name: donusum(SSGSS).piskel.45_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 225
-        width: 7
-        height: 16
+        x: 48
+        y: 192
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5753266, y: 0.48430252}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31e140d31181a6c4d94fc94d9d718d92
-      internalID: 1528429902
+      spriteID: b83f21857a8da6e40a930819d4117469
+      internalID: -972827451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_2
+      name: donusum(SSGSS).piskel.45_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 225
-        width: 9
-        height: 17
+        x: 96
+        y: 192
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5645608, y: 0.46581942}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c5e19a9f8e5b645a0b1ffbd3a5148a
-      internalID: -1283042448
+      spriteID: 5dfdfb8deb7a95f45b4c78f44ef10eec
+      internalID: -1902060038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_3
+      name: donusum(SSGSS).piskel.45_3
       rect:
         serializedVersion: 2
-        x: 10
-        y: 193
-        width: 8
-        height: 17
+        x: 144
+        y: 192
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5000001, y: 0.4664863}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7d9c6eddc97e1d4bacf52d16279675e
-      internalID: -1665855522
+      spriteID: cdd24ea8fea782c49906627a82e69cf5
+      internalID: -1664209458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_4
+      name: donusum(SSGSS).piskel.45_4
       rect:
         serializedVersion: 2
-        x: 40
-        y: 193
-        width: 10
-        height: 16
+        x: 192
+        y: 192
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5961319, y: 0.48270798}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0204faa360189154da64edac0807a5e4
-      internalID: -468858393
+      spriteID: 336b1c62dccf35e48939263d529388f7
+      internalID: -1637713113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_5
+      name: donusum(SSGSS).piskel.45_5
       rect:
         serializedVersion: 2
-        x: 74
-        y: 193
-        width: 12
-        height: 17
+        x: 0
+        y: 144
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.3456942, y: 0.4664863}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26eedadde6eaf3444a68165a5dde02fc
-      internalID: -357933451
+      spriteID: 9441ceb1b5cf26d439596c6d248a857e
+      internalID: 1631232387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_6
+      name: donusum(SSGSS).piskel.45_6
       rect:
         serializedVersion: 2
-        x: 10
-        y: 161
-        width: 8
-        height: 17
+        x: 48
+        y: 144
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.4821955, y: 0.4664863}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0414e3ad7ee7c774b93514a98fc146a7
-      internalID: 787406616
+      spriteID: 7f5b2faf6e05f6b4ba9979e74151dcae
+      internalID: -1541732434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_7
+      name: donusum(SSGSS).piskel.45_7
       rect:
         serializedVersion: 2
-        x: 42
-        y: 162
-        width: 7
-        height: 17
+        x: 96
+        y: 144
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5854999, y: 0.47887826}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db3363bd8dfb3a041aa91a6f0e8b089f
-      internalID: -1143263972
+      spriteID: 127d51beff01de142b86b9f33c0b75ba
+      internalID: -938005253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_8
+      name: donusum(SSGSS).piskel.45_8
       rect:
         serializedVersion: 2
-        x: 75
-        y: 162
-        width: 7
-        height: 17
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.5776847, y: 0.4760096}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc9d2f43c4c9eea48a3101f4529269e7
-      internalID: 1129670160
+      spriteID: 30fb11bda5c70c34bb830fdfcdce9dd4
+      internalID: -1751388762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_9
+      name: donusum(SSGSS).piskel.45_9
       rect:
         serializedVersion: 2
-        x: 127
-        y: 133
-        width: 23
-        height: 31
+        x: 192
+        y: 144
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.48389998, y: 0.42534366}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d63fdd87ef709a140872df6a2b1bfec1
-      internalID: -116752067
+      spriteID: 795fabfde9eb81246977fa56d1f593f9
+      internalID: 39513446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_10
+      name: donusum(SSGSS).piskel.45_10
       rect:
         serializedVersion: 2
-        x: 155
-        y: 134
-        width: 26
-        height: 33
+        x: 0
+        y: 96
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.50356, y: 0.3653472}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e94ac6068fa2e349b452aecbef461a4
-      internalID: -1093508401
+      spriteID: 60f7cc78a0f0d2542a1843af87cd70cb
+      internalID: 835536038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_11
+      name: donusum(SSGSS).piskel.45_11
       rect:
         serializedVersion: 2
-        x: 185
-        y: 134
-        width: 25
-        height: 36
+        x: 48
+        y: 96
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.47921142, y: 0.3355535}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0561b036a1f3a6b4f9aef8613218cf24
-      internalID: 1526333402
+      spriteID: fef50655649153e4aab712075adf82b7
+      internalID: -239221206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_12
+      name: donusum(SSGSS).piskel.45_12
       rect:
         serializedVersion: 2
-        x: 215
-        y: 133
-        width: 26
-        height: 38
+        x: 96
+        y: 96
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.42429528, y: 0.3441945}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c104900ac7bc1f946832aa46d3ad74c9
-      internalID: -312295837
+      spriteID: 31989e6d53c7f0f499fd50adc82e6ed2
+      internalID: 1483282411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_13
+      name: donusum(SSGSS).piskel.45_13
       rect:
         serializedVersion: 2
-        x: 10
-        y: 137
-        width: 7
-        height: 17
+        x: 144
+        y: 96
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.57104504, y: 0.47074622}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36748130d51e1bb43a3420076e1e0d52
-      internalID: -1261497445
+      spriteID: 41ca1bd547b84064f8ddc2304c4b5032
+      internalID: -144837257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_14
+      name: donusum(SSGSS).piskel.45_14
       rect:
         serializedVersion: 2
-        x: 43
-        y: 137
-        width: 7
-        height: 17
+        x: 192
+        y: 96
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.43292508, y: 0.4723807}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9317312a7331754ea1eed08e62e6021
-      internalID: 1943476561
+      spriteID: f4a64e98475739e4a802c6efb0203a4f
+      internalID: -49615354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_15
+      name: donusum(SSGSS).piskel.45_15
       rect:
         serializedVersion: 2
-        x: 72
-        y: 134
-        width: 11
-        height: 24
+        x: 0
+        y: 48
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.6273415, y: 0.50144196}
-      border: {x: 3, y: 4, z: 0, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25f8d1a37e0238a40a01aed88f17dbc3
-      internalID: -1489330739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harununbest_16
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 136
-        width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d702bb1de3f5d814d87b3567f9058ae8
-      internalID: 346737057
+      spriteID: eb5da443f4ac26442b9c90f4abb92313
+      internalID: -1333318015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_17
+      name: donusum(SSGSS).piskel.45_16
       rect:
         serializedVersion: 2
-        x: 101
-        y: 134
-        width: 19
-        height: 30
+        x: 48
+        y: 48
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.4755253, y: 0.4011902}
-      border: {x: 6, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 429649f7feb30ba448eb0719319c5dca
-      internalID: -2004650964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harununbest_18
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 134
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9567ad48559df78409c87871ef898134
-      internalID: 1954434942
+      spriteID: aeec2dab2a018e049a71d552490184b2
+      internalID: 105713089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_19
+      name: donusum(SSGSS).piskel.45_17
       rect:
         serializedVersion: 2
-        x: 2
-        y: 90
-        width: 27
-        height: 39
+        x: 96
+        y: 48
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.48087746, y: 0.33672294}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed7d3ec65f1ccf84bbd1173ebe442c56
-      internalID: 1616349911
+      spriteID: a6c9ce4f20416084e83f147b60548128
+      internalID: 1895754896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_20
+      name: donusum(SSGSS).piskel.45_18
       rect:
         serializedVersion: 2
-        x: 35
-        y: 90
-        width: 26
-        height: 36
+        x: 144
+        y: 48
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.42718726, y: 0.36136162}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c4f57490912c543a432e25a9ae2889
-      internalID: 1355917889
+      spriteID: 46b405c209f3eb340add0dc1be5e6b3d
+      internalID: -318489873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_21
+      name: donusum(SSGSS).piskel.45_19
       rect:
         serializedVersion: 2
-        x: 67
-        y: 91
-        width: 25
-        height: 36
+        x: 192
+        y: 48
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.48368865, y: 0.3323557}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 317670fd468f48f46a30985117f26d3c
-      internalID: 66831724
+      spriteID: 0e8f5aeea4d15d74690045833a1dab41
+      internalID: 644535175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_22
+      name: donusum(SSGSS).piskel.45_20
       rect:
         serializedVersion: 2
-        x: 98
-        y: 91
-        width: 27
-        height: 33
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.48187622, y: 0.36407238}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acc77b89a4a314b46adf0b3a3671ee74
-      internalID: 1882525205
+      spriteID: 660c79a448db9e14a9cbad8e0835ae79
+      internalID: -374000808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_23
+      name: donusum(SSGSS).piskel.45_21
       rect:
         serializedVersion: 2
-        x: 131
-        y: 90
-        width: 23
-        height: 31
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.48226994, y: 0.41844326}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4045d94eaf0a05459be315ac8ffc628
-      internalID: 1565480340
+      spriteID: 8f900d0504f2c5c40b9ce609d5363c83
+      internalID: -8755211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_24
+      name: donusum(SSGSS).piskel.45_22
       rect:
         serializedVersion: 2
-        x: 158
-        y: 90
-        width: 22
-        height: 31
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.4999993, y: 0.42107415}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38d67e2fb3e5e524ea3593a89b984ccc
-      internalID: 1371872099
+      spriteID: be88fc60ebd6a714e979da13730620ce
+      internalID: 1117884688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: harununbest_25
+      name: donusum(SSGSS).piskel.45_23
       rect:
         serializedVersion: 2
-        x: 186
-        y: 91
-        width: 16
-        height: 24
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 9
-      pivot: {x: 0.44392967, y: 0.50339794}
+      pivot: {x: 0.5, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28c42d067fbe9204290520a16d17b1cc
-      internalID: 1520861833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: harununbest_26
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 95
-        width: 7
-        height: 17
-      alignment: 9
-      pivot: {x: 0.43586513, y: 0.47359198}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78b2b57d22c510142ac4a99ba5846393
-      internalID: 1117876609
+      spriteID: f25ef6bd18ce23d4b859bd02d61394b4
+      internalID: -1086052016
       vertices: []
       indices: 
       edges: []
@@ -682,33 +630,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      harununbest_5: -357933451
-      harununbest_26: 1117876609
-      harununbest_0: 1112052920
-      harununbest_17: -2004650964
-      harununbest_12: -312295837
-      harununbest_19: 1616349911
-      harununbest_20: 1355917889
-      harununbest_11: 1526333402
-      harununbest_15: -1489330739
-      harununbest_21: 66831724
-      harununbest_24: 1371872099
-      harununbest_4: -468858393
-      harununbest_18: 1954434942
-      harununbest_14: 1943476561
-      harununbest_3: -1665855522
-      harununbest_25: 1520861833
-      harununbest_9: -116752067
-      harununbest_22: 1882525205
-      harununbest_16: 346737057
-      harununbest_8: 1129670160
-      harununbest_13: -1261497445
-      harununbest_23: 1565480340
-      harununbest_1: 1528429902
-      harununbest_10: -1093508401
-      harununbest_2: -1283042448
-      harununbest_7: -1143263972
-      harununbest_6: 787406616
+      donusum(SSGSS).piskel.45_1: -972827451
+      donusum(SSGSS).piskel.45_21: -8755211
+      donusum(SSGSS).piskel.45_12: 1483282411
+      donusum(SSGSS).piskel.45_18: -318489873
+      donusum(SSGSS).piskel.45_8: -1751388762
+      donusum(SSGSS).piskel.45_3: -1664209458
+      donusum(SSGSS).piskel.45_23: -1086052016
+      donusum(SSGSS).piskel.45_6: -1541732434
+      donusum(SSGSS).piskel.45_2: -1902060038
+      donusum(SSGSS).piskel.45_4: -1637713113
+      donusum(SSGSS).piskel.45_0: 123238517
+      donusum(SSGSS).piskel.45_16: 105713089
+      donusum(SSGSS).piskel.45_11: -239221206
+      donusum(SSGSS).piskel.45_19: 644535175
+      donusum(SSGSS).piskel.45_7: -938005253
+      donusum(SSGSS).piskel.45_5: 1631232387
+      donusum(SSGSS).piskel.45_22: 1117884688
+      donusum(SSGSS).piskel.45_13: -144837257
+      donusum(SSGSS).piskel.45_15: -1333318015
+      donusum(SSGSS).piskel.45_17: 1895754896
+      donusum(SSGSS).piskel.45_14: -49615354
+      donusum(SSGSS).piskel.45_9: 39513446
+      donusum(SSGSS).piskel.45_20: -374000808
+      donusum(SSGSS).piskel.45_10: 835536038
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

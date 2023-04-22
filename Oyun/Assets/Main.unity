@@ -641,12 +641,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654031179}
+  - component: {fileID: 654031183}
+  - component: {fileID: 654031182}
   - component: {fileID: 654031178}
   - component: {fileID: 654031176}
   - component: {fileID: 654031180}
   - component: {fileID: 654031181}
-  - component: {fileID: 654031182}
-  - component: {fileID: 654031183}
   m_Layer: 0
   m_Name: Harun
   m_TagString: Player
@@ -829,6 +829,8 @@ MonoBehaviour:
   Ki: 0.01
   increaseRate: 2.3
   healt: 100
+  ssj: 1
+  ssgss: 0
   kame: 0
   dead: 0
   charcing: 0
