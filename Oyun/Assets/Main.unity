@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 654031176}
   - component: {fileID: 654031180}
   - component: {fileID: 654031181}
+  - component: {fileID: 654031184}
   m_Layer: 0
   m_Name: Harun
   m_TagString: Player
@@ -839,6 +840,19 @@ MonoBehaviour:
   kiSlider: {fileID: 863213848}
   healtSlider: {fileID: 1421147144}
   animator: {fileID: 1197705728}
+--- !u!114 &654031184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654031174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20768033bc1cbe4f881c14d29f96a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  supa: {fileID: 654031183}
 --- !u!1 &863213847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
