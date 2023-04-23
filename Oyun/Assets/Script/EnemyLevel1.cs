@@ -36,38 +36,28 @@ public class EnemyLevel1 : MonoBehaviour
     void EnemyMove()
     {
 
-        float saniye = 0;
-        saniye += 1 * Time.deltaTime;
-        if (saniye == 1)
-        {
-            saniye = 0;
-        }
-        else
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
+            //transform.localRotation = Quaternion.Euler(0, 180, 0);
+            
+            //transform.localRotation = Quaternion.Euler(0, 0, 0);
 
-        
-        
         
     }
 
     void EnemyAi()
     {
-        RaycastHit2D hitEnemy = Physics2D.Raycast(transform.position, -transform.right, distance);
+        RaycastHit2D hitEnemy = Physics2D.Raycast(transform.position, transform.right, distance);
 
         if (hitEnemy.collider !=null)
         {
             supa.kame = true;
             Debug.DrawLine(transform.position, hitEnemy.point, Color.red);
-            print("saldýr");
             //EnemyFollow();
         }
         else
         {
             supa.kame = false;
-            Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
-            print("saldýrma");
+            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+            
             EnemyMove();
         }
     }
