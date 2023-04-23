@@ -833,6 +833,7 @@ MonoBehaviour:
   ssgss: 0
   kame: 0
   dead: 0
+  kamehameha: 0
   charcing: 0
   kiFull: 0
   kiSlider: {fileID: 863213848}
@@ -926,7 +927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.95006, y: 123}
+  m_AnchoredPosition: {x: -262.8, y: 150.5}
   m_SizeDelta: {x: 230, y: 48.1738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &863454499
@@ -1300,7 +1301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.95, y: 123}
+  m_AnchoredPosition: {x: -262.79993, y: 150.5}
   m_SizeDelta: {x: 230, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1197705728
@@ -1612,8 +1613,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.94829, y: 155.75}
-  m_SizeDelta: {x: 190.0289, y: 45.496}
+  m_AnchoredPosition: {x: -262.56, y: 189.5}
+  m_SizeDelta: {x: 229.51, y: 45.496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421147144
 MonoBehaviour:

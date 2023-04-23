@@ -9,15 +9,19 @@ public class SUPA : MonoBehaviour
     public float Ki = 0.01f;
     float maxKi = 100;
     float timer = 0f;
+    float kamehaTimer = 0f;
+    float waitTime = 0.3f;
     int sCount = 0;
 
     public float increaseRate = 2.3f;
     public float healt = 100;
 
+
     public bool ssj = true;
     public bool ssgss = false;
     public bool kame = false;
     public bool dead = false;
+    public bool kamehameha = false;
     public bool charcing;
     public bool kiFull;
 
@@ -46,6 +50,7 @@ public class SUPA : MonoBehaviour
             Transform();
             KiCharge();
             setHealt();
+            Kamehameha();
         }
 
     }
@@ -71,14 +76,14 @@ public class SUPA : MonoBehaviour
 
     public void KiCharge()
     {
-        if (Input.GetKeyDown(KeyCode.S) && Ki < maxKi)
+        if (Input.GetKeyDown(KeyCode.S) && Ki < maxKi && movement.isGrounded == true)
         {
+            Lock();
             charcing = true;
             anim.SetTrigger("Ki");
         }
         else if (Input.GetKey(KeyCode.S) && Ki < maxKi)
         {
-            Lock();
             anim.speed = 1f;
             anim.SetBool("KiCharge", true);
             if (Ki * (1.0f + increaseRate * Time.deltaTime) > maxKi)
@@ -99,6 +104,38 @@ public class SUPA : MonoBehaviour
             anim.SetBool("KiCharge", false);
             Unlock();
         }
+    }
+
+    public void Kamehameha()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && Ki > 50f)
+        {
+            Lock();
+            Ki -= 50;
+            kamehameha = true;
+            anim.SetTrigger("Kamehameha");
+        }
+        if (Input.GetKey(KeyCode.Q) && Ki >= 3f)
+        {
+            kamehaTimer += Time.deltaTime;
+
+            if (kamehaTimer >= waitTime)
+            {
+                anim.speed = 1f;
+                anim.SetBool("isKamehameha", true);
+                Ki -= 3f;
+                kiSlider.value = Ki;
+                kamehaTimer = 0f; // Sayaç sýfýrlanýyor.
+            }
+
+        }
+        else
+        {
+            anim.SetBool("isKamehameha", false);
+            Unlock();
+            kamehaTimer = 0f; // Eðer Q tuþu basýlý deðilse sayaç sýfýrlanýyor.
+        }
+
     }
 
     void Lock()
@@ -135,15 +172,15 @@ public class SUPA : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 1f)
         {
-            if (sCount == 3)
+            if (sCount == 3 && movement.isGrounded == true)
             {
-                StartCoroutine(RunCodeForSomeTime(2.5f));
+                StartCoroutine(RunCodeForSomeTime(2f));
                 ssj = !ssj;
                 ssgss = !ssgss;
                 anim.SetTrigger("Transform");
                 anim.SetBool("SSJ", ssj);
                 anim.SetBool("SSGSS", ssgss);
-               
+
 
             }
             // sCount ve timer'ý sýfýrla
@@ -155,7 +192,7 @@ public class SUPA : MonoBehaviour
     IEnumerator RunCodeForSomeTime(float sec)
     {
         float totalTime = sec;
-        float timeInterval = 2.5f;
+        float timeInterval = sec;
         float elapsedTime = 0f;
 
         while (elapsedTime < totalTime)
