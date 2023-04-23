@@ -45,7 +45,7 @@ public class EnemyLevel1 : MonoBehaviour
 
     void EnemyAi()
     {
-        RaycastHit2D hitEnemy = Physics2D.Raycast(transform.position, transform.right, distance);
+        RaycastHit2D hitEnemy = Physics2D.Raycast(transform.position, -transform.right, distance);
 
         if (hitEnemy.collider !=null)
         {
@@ -56,7 +56,7 @@ public class EnemyLevel1 : MonoBehaviour
         else
         {
             supa.kame = false;
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
+            Debug.DrawLine(transform.position, transform.position - transform.right * distance, Color.green);
             
             EnemyMove();
         }
